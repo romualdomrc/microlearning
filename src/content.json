@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "title": "Sistemas Operacionais",
+        "img":
+            "https://i.udemycdn.com/course/480x270/1801904_16d6_2.jpg",
+    },
+    {
+        "id": 2,
+        "title": "Redes de Computadores",
+        "img":
+            "https://i.udemycdn.com/course/480x270/580876_a07a_2.jpg",
+    },
+    {
+        "id": 3,
+        "title": "Segurança e Auditoria de Software",
+        "img":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQMnBQ45jth8DGBo6_e8QxguzmJ3GcWzkoHdTeJkxdr0CAMcdt",
+    },
+    {
+        "id": 4,
+        "title": "Desenvolvimento para Dispositivos Móveis",
+        "img":
+            "https://i.udemycdn.com/course/750x422/891474_a221_4.jpg",
+    },
+    {
+        "id": 5,
+        "title": "Gerência de Redes",
+        "img":
+            "https://cdn.lynda.com/courses/5038213-636897078190395411_270x480_thumb.jpg",
+    },
+    
+]
