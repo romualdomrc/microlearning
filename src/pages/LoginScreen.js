@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Button, ActivityIndicator, Text, Alert } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import firebase from 'firebase';
-
-import FormRow from '../components/FormRow';
 
 import { connect } from 'react-redux';
 import { tryLogin } from '../actions';
 
+import { VieW, FormRoW, TextInpuT, TexT, ButtoN } from "../styles/stylesRN";
+
+ 
 
 class LoginScreen extends React.Component {
     constructor(props) {
@@ -95,7 +96,7 @@ class LoginScreen extends React.Component {
         if (!message)
             return null;
         return (
-            <Text>{ message }</Text>
+            <TexT>{ message }</TexT>
         );    
     }
 
@@ -104,55 +105,39 @@ class LoginScreen extends React.Component {
         return <ActivityIndicator />  
 
       return (
-        <View style={styles.button}>
-            <Button color="#696969" title="Entrar"
+        <VieW margintop='20'>
+            <ButtoN color="#696969" title="Entrar"
             onPress={()=> this.tryLogin()}/>
-        </View>
+        </VieW>
       )   
     }  
 
 //databinding
     render() {
         return (
-            <View style={{backgroundColor: "#008b8b", flex: 1}}>
-                <View style={{marginTop: 20}}>
-                <FormRow>
-                    <TextInput style = {styles.textInput} 
+            <VieW>
+                <VieW margintop='20'>
+                <FormRoW>
+                    <TextInpuT  
                         placeholder="user@email.com"
                         value={this.state.mail}
                         onChangeText={value => this.onChangeMail(value)}/>
-                </FormRow>
-                <FormRow>        
-                    <TextInput style = {styles.textInput}
+                </FormRoW>
+                <FormRoW>        
+                    <TextInpuT
                         placeholder="******"
                         secureTextEntry 
                         value={this.state.password}
                         onChangeText={value => this.onChangePassword(value)}/>
 
-                </FormRow>
-                </View>
+                </FormRoW>
+                </VieW>
                 { this.renderButton() }     
                 { this.renderMessage() }       
   
-            </View>
+            </VieW>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    textInput: {
-        borderColor: 'black',
-        borderBottomWidth: 1,
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingBottom: 10,
-        fontSize: 20
-    },
-    button: {
-        marginTop: 20,
-
-    }
-
-});
 
 export default connect(null, { tryLogin } )(LoginScreen)
